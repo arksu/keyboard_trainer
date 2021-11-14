@@ -1,8 +1,8 @@
 <template>
   <p>
-    <b class="completed">{{completed}}</b>
-    <b class="nextkey">{{current}}</b>
-    <b class="next">{{next}}</b>
+    <b class="completed">{{completed.replace(" ","&nbsp;")}}</b>
+    <b :class="'nextkey' + (error ? ' error' : '')">{{current.replace(" ","&nbsp;")}}</b>
+    <b class="next">{{next.replace(" ","&nbsp;")}}</b>
   </p>
 </template>
 
@@ -12,7 +12,8 @@ export default {
   props : {
     completed : { type: String, required : true},
     current : { type: String, required : true},
-    next : { type: String, required : true}
+    next : { type: String, required : true},
+    error : { type: Boolean, required : true},
   },
   methods: {
   },
@@ -31,5 +32,9 @@ export default {
 
 .next {
   color: #bbb;
+}
+
+.error {
+  background: #920E0E	 !important;
 }
 </style>

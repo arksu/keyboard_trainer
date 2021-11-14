@@ -1,6 +1,6 @@
 <template>
   <!--  <img alt="Vue logo" src="./assets/logo.png">-->
-  <typing-text ref="typing" :rows="rows"/>
+  <typing-text ref="typing" @typing-error="onTypingError"/>
 </template>
 
 <script>
@@ -11,25 +11,13 @@ export default {
   components: {
     TypingText
   },
-  data() {
-    return {
-      rows: [
-        {
-          completed: " a a a ",
-          current: "c",
-          next: " b b b"
-        },
-        {
-          completed: " a a a ",
-          current: "c",
-          next: " b b b"
-        },
-      ]
-    }
-  },
+
   methods: {
     keyDown: function (e) {
-      this.$refs.typing.onKeyDown(e.key)
+      this.$refs.typing.onKeyDown(e)
+    },
+    onTypingError() {
+      console.log("onTypingError")
     }
   },
   mounted() {
@@ -43,7 +31,7 @@ export default {
 
 <style>
 #app {
-  font-family: "Cousine","Courier New",Courier,monospace;
+  font-family: "Cousine", "Courier New", Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
