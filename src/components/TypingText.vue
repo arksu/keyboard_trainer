@@ -1,12 +1,16 @@
 <template>
-  <div class="typing-box">
-    <typing-row v-for="(r) in rows" ref="row" :key="r"
-                :completed="r.completed"
-                :current="r.current"
-                :next="r.next"
-                :error="r.error"
+  <div class="outer-box">
+    <div class="text-area">
 
-    ></typing-row>
+      <typing-row v-for="(r) in rows" ref="row" :key="r"
+                  :num="r.num"
+                  :completed="r.completed"
+                  :current="r.current"
+                  :next="r.next"
+                  :error="r.error"
+
+      ></typing-row>
+    </div>
 
   </div>
 </template>
@@ -39,6 +43,7 @@ export default {
       for (let i = 0; i < arr.length; i++) {
         let str = arr[i]
         let r = {
+          num: i + 1,
           completed: "",
           current: "",
           next: str,
@@ -115,9 +120,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.typing-box {
-  border-color: #444444;
-  border-width: 1px;
+.outer-box {
+  width: 400px;
+  border: 1px solid #4e4e4e;
+  padding: 10px 15px;
+}
+.text-area {
+
 }
 
 </style>
