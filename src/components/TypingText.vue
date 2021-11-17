@@ -56,7 +56,7 @@ export default {
             row.current = ""
             this.activeRow++
             if (this.activeRow >= this.rows.length) {
-              console.log("finished!")
+              this.$emit("typing-success")
             } else {
               let nextRow = this.rows[this.activeRow]
               nextRow.current = nextRow.next.slice(0, 1)
@@ -82,7 +82,7 @@ export default {
           this.$emit("typing-error")
         }
       }
-    }
+    },
   },
   mounted() {
     console.log("mounted TypingText. rows: " + this.rows)

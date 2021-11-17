@@ -1,7 +1,9 @@
 <template>
   <!--    <img alt="Vue logo" src="./assets/logo.png">-->
   <button @click="setText(this.text)">SET</button>
-  <typing-text ref="typing" @typing-error="onTypingError"/>
+  <typing-text ref="typing" @typing-error="onTypingError" @typing-success="onTypingSuccess"/>
+
+  <div>Ошибок: {{errorsCounter}}</div>
 </template>
 
 <script>
@@ -14,7 +16,8 @@ export default {
   },
   data() {
     return {
-      text: "some some val\nmore else"
+      text: "some some val\nmore else",
+      errorsCounter : 0
     }
   },
 
@@ -26,12 +29,17 @@ export default {
       }
     },
     onTypingError() {
+      this.errorsCounter++
       console.log("onTypingError")
+    },
+    onTypingSuccess() {
+      console.log("success")
     },
     /**
      * установить текст в поле набора текста
      */
     setText(text) {
+      this.errorsCounter = 0
       let arr = text.split("\n")
       console.log(arr)
       let rows = []
