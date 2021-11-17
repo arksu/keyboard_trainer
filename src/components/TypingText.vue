@@ -16,30 +16,22 @@ import TypingRow from "@/components/TypingRow";
 
 export default {
   name: 'TypingText',
-  props: {},
+  props: {
+    // rows: Array
+  },
   components: {TypingRow},
   data() {
     return {
       // ожидание таймера ошибки (пока не истек - не реагируем на клавиши)
-      waitError : false,
+      waitError: false,
       activeRow: 0,
-      rows: [
-        {
-          completed: "",
-          current: "а",
-          next: " а в в ",
-          error : false
-        },
-        {
-          completed: "",
-          current: "",
-          next: "ы ы ф ф ",
-          error : false
-        },
-      ]
+      rows: []
     }
   },
   methods: {
+    setRows(rows) {
+      this.rows = rows
+    },
     onKeyDown: function (e) {
       // пока ждем таймер ошибки - не обрабатываем ввод
       if (this.waitError) return
@@ -100,19 +92,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
 
 a {
   color: #42b983;

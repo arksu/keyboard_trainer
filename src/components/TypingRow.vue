@@ -1,8 +1,8 @@
 <template>
   <p>
-    <b class="completed">{{completed.replace(" ","&nbsp;")}}</b>
-    <b :class="'nextkey' + (error ? ' error' : '')">{{current.replace(" ","&nbsp;")}}</b>
-    <b class="next">{{next.replace(" ","&nbsp;")}}</b>
+    <b class="completed typing-text">{{completed.replace(" ","&nbsp;")}}</b>
+    <b :class="'nextkey typing-text' + (error ? ' error' : '')">{{current.replace(" ","&nbsp;")}}</b>
+    <b class="next typing-text">{{next.replace(" ","&nbsp;")}}</b>
   </p>
 </template>
 
@@ -21,6 +21,9 @@ export default {
 </script>
 
 <style>
+.typing-text {
+  font-size: 25px;
+}
 .completed {
   color: #000;
 }
