@@ -1,6 +1,6 @@
 <template>
   <!--    <img alt="Vue logo" src="./assets/logo.png">-->
-  <button @click="setText(this.text)">SET</button>
+  <button @click="this.$refs.typing.setText(text)">SET</button>
   <typing-text ref="typing" @typing-error="onTypingError" @typing-success="onTypingSuccess"/>
 
   <div>Ошибок: {{errorsCounter}}</div>
@@ -16,7 +16,7 @@ export default {
   },
   data() {
     return {
-      text: "some some val\nmore else",
+      text: "Some \nmore",
       errorsCounter : 0
     }
   },
@@ -35,35 +35,10 @@ export default {
     onTypingSuccess() {
       console.log("success")
     },
-    /**
-     * установить текст в поле набора текста
-     */
-    setText(text) {
-      this.errorsCounter = 0
-      let arr = text.split("\n")
-      console.log(arr)
-      let rows = []
-      for (let i = 0; i < arr.length; i++) {
-        let str = arr[i]
-        let r = {
-          completed: "",
-          current: "",
-          next: str,
-          error: false
-        }
-        if (i === 0) {
-          r.current = r.next.slice(0, 1)
-          r.next = r.next.slice(1)
-        }
-        rows.push(r)
-      }
-      console.log(rows)
-      this.$refs.typing.rows = rows
-    }
   },
   mounted() {
     window.addEventListener('keydown', this.keyDown)
-    this.setText(this.text)
+    this.$refs.typing.setText(this.text)
   },
   unmounted() {
     window.removeEventListener('keydown', this.keyDown)

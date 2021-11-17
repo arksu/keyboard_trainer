@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="typing-box">
     <typing-row v-for="(r) in rows" ref="row" :key="r"
                 :completed="r.completed"
                 :current="r.current"
@@ -29,8 +29,30 @@ export default {
     }
   },
   methods: {
-    setRows(rows) {
+    /**
+     * распарсить и установить текст
+     */
+    setText(text) {
+      this.errorsCounter = 0
+      let arr = text.split("\n")
+      let rows = []
+      for (let i = 0; i < arr.length; i++) {
+        let str = arr[i]
+        let r = {
+          completed: "",
+          current: "",
+          next: str,
+          error: false
+        }
+        if (i === 0) {
+          r.current = r.next.slice(0, 1)
+          r.next = r.next.slice(1)
+        }
+        rows.push(r)
+      }
+      console.log(rows)
       this.rows = rows
+      this.activeRow = 0
     },
     onKeyDown: function (e) {
       // пока ждем таймер ошибки - не обрабатываем ввод
@@ -93,8 +115,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-a {
-  color: #42b983;
+.typing-box {
+  border-color: #444444;
+  border-width: 1px;
 }
 
 </style>
