@@ -53,7 +53,7 @@
 }
 
 .v-keyboard.v-opt-nextkey .v-key.next {
-    /*background-image: url('../img/svg/v_nextkey_sys.svg');*/
+    background-image: url('v_nextkey_sys.svg');
     border-color: #CCC
 }
 
@@ -133,11 +133,11 @@
     width: 47px;
     height: 86px;
     border: 0;
-    /*background: url("../img/svg/iso_enter.svg") no-repeat 0 0*/
+    background: url("iso_enter.svg") no-repeat 0 0
 }
 
 .v-keyboard .v-key.iso .v-key.next[data-key=ENTER] {
-    /*background-image: url("../img/svg/iso_enter_next.svg")*/
+    background-image: url("iso_enter_next.svg")
 }
 
 .v-keyboard .v-key[data-key=SPACE] {
@@ -199,7 +199,7 @@
 }
 
 .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger1, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger2, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger3, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger4, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger7, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger8, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger9, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger10 {
-    /*background-image: url('../img/svg/v_nextkey.svg')*/
+    background-image: url('v_nextkey.svg')
 }
 
 .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger1, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger10 {
@@ -413,7 +413,7 @@
     display: block;
     width: 26px;
     height: 26px;
-    /*background: url('../img/svg/v_opts.svg') no-repeat*/
+    background: url('v_opts.svg') no-repeat
 }
 
 .v-keyboard .v-tools .v-actions .v-action > a:hover {
@@ -572,7 +572,7 @@
     position: absolute;
     width: 186px;
     height: 329px;
-    /*background: url('../img/v_hands.png') no-repeat*/
+    background: url('v_hands.png') no-repeat
 }
 
 .v-keyboard .v-hands .v-hand.left {
