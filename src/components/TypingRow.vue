@@ -49,7 +49,7 @@ p {
   padding: 0;
   margin: 0;
   font-size: 17px;
-  letter-spacing: 0.1em;
+  letter-spacing: 2px;
   line-height: 1.2;
 }
 

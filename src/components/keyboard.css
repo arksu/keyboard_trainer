@@ -1,0 +1,690 @@
+.v-keyboard {
+    position: relative;
+    width: 980px;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none
+}
+
+.v-keyboard a:focus {
+    outline: 0
+}
+
+.v-keyboard .v-row {
+    width: 110%
+}
+
+.v-keyboard .v-key {
+    position: relative;
+    float: left;
+    width: 38px;
+    height: 38px;
+    margin: 2px 0 0 2px;
+    background-color: #FFF;
+    border: 2px solid #e4e4e4;
+    line-height: 1;
+    cursor: default;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px
+}
+
+.v-keyboard .v-key:hover {
+    filter: brightness(103%)
+}
+
+.v-keyboard .v-key.fake:hover {
+    filter: brightness(100%)
+}
+
+.v-keyboard .v-key.ansi, .v-keyboard .v-key.iso {
+    display: none
+}
+
+.v-keyboard.v-scheme-ANSI .v-key.ansi, .v-keyboard.v-scheme-ISO .v-key.iso {
+    display: block
+}
+
+.v-keyboard .v-key.pressed {
+    left: 1px;
+    top: 1px
+}
+
+.v-keyboard.v-opt-nextkey .v-key.next {
+    /*background-image: url('../img/svg/v_nextkey_sys.svg');*/
+    border-color: #CCC
+}
+
+.v-keyboard.v-opt-nextkey .v-key.next.finger5, .v-keyboard.v-opt-nextkey .v-key.next.finger6 {
+    background-image: repeating-linear-gradient(-45deg, #fff, #fff 5px, #eee 5px, #eee 10px);
+    background-repeat: no-repeat
+}
+
+.v-keyboard.v-opt-nextkey .v-key.next.lefthand {
+    background-size: 50% 100%
+}
+
+.v-keyboard.v-opt-nextkey .v-key.next.righthand {
+    background-size: 50% 100%;
+    background-position: top right
+}
+
+.v-keyboard .v-key .v-key {
+    margin: 0
+}
+
+.v-keyboard .v-key.fake {
+    background: 0;
+    border: 0;
+    width: 42px;
+    height: 42px
+}
+
+.v-keyboard .v-key:first-of-type {
+    margin-left: 0
+}
+
+.v-keyboard .v-row:first-of-type .v-key {
+    margin-top: 0
+}
+
+.v-keyboard .v-clear {
+    height: 0;
+    line-height: 0;
+    clear: both
+}
+
+.v-keyboard .v-key[data-key=ALTGR], .v-keyboard.v-layoutex-altgr .v-key.right[data-key=ALT] {
+    display: none
+}
+
+.v-keyboard.v-layoutex-altgr .v-key[data-key=ALTGR], .v-keyboard .v-key.right[data-key=ALT] {
+    display: block
+}
+
+.v-keyboard.v-layoutex-phantom .v-key[data-key=ANGLE] {
+    display: block
+}
+
+.v-keyboard .v-key[data-key=BACKSPACE], .v-keyboard .v-key[data-key=TAB], .v-keyboard .v-key[data-key=CONTROL] {
+    width: 60px
+}
+
+.v-keyboard.v-scheme-ISO .v-key[data-key=TAB] {
+    width: 55px
+}
+
+.v-keyboard .v-key[data-key=CAPSLOCK] {
+    width: 70px
+}
+
+.v-keyboard .v-key .v-key[data-key=ENTER] {
+    width: 38px;
+    height: 82px
+}
+
+.v-keyboard .v-key.ansi[data-key=ENTER] {
+    width: 72px
+}
+
+.v-keyboard .v-key.iso .v-key[data-key=ENTER] {
+    width: 47px;
+    height: 86px;
+    border: 0;
+    /*background: url("../img/svg/iso_enter.svg") no-repeat 0 0*/
+}
+
+.v-keyboard .v-key.iso .v-key.next[data-key=ENTER] {
+    /*background-image: url("../img/svg/iso_enter_next.svg")*/
+}
+
+.v-keyboard .v-key[data-key=SPACE] {
+    width: 324px
+}
+
+.v-keyboard .v-key[data-key=SHIFT] {
+    width: 93px
+}
+
+.v-keyboard.v-scheme-ISO .v-key.left[data-key=SHIFT], .v-keyboard.v-layoutex-phantom .v-key.left[data-key=SHIFT] {
+    width: 50px
+}
+
+.v-keyboard.v-scheme-ISO .v-key.right[data-key=SHIFT], .v-keyboard.v-layoutex-phantom .v-key.right[data-key=SHIFT] {
+    width: 92px
+}
+
+.v-keyboard .v-key[data-key=NUMPAD0] {
+    width: 82px
+}
+
+.v-keyboard .v-key[data-key=ADD] {
+    height: 82px
+}
+
+.v-keyboard .v-key.separator {
+    margin-left: 20px
+}
+
+.v-keyboard.v-opt-colors .v-key.finger1, .v-keyboard.v-opt-colors .v-key.finger10 {
+    background-color: #f4b3c2;
+    border-color: #f4b3c2
+}
+
+.v-keyboard.v-opt-colors .v-key.finger2, .v-keyboard.v-opt-colors .v-key.finger9 {
+    background-color: #fdcf8c;
+    border-color: #fdcf8c
+}
+
+.v-keyboard.v-opt-colors .v-key.finger3, .v-keyboard.v-opt-colors .v-key.finger8 {
+    background-color: #bcdd9c;
+    border-color: #bcdd9c
+}
+
+.v-keyboard.v-opt-colors .v-key.finger4 {
+    background-color: #a3dce0;
+    border-color: #a3dce0
+}
+
+.v-keyboard.v-opt-colors .v-key.finger5, .v-keyboard.v-opt-colors .v-key.finger6 {
+    background-color: #d2b4de;
+    border-color: #d2b4de
+}
+
+.v-keyboard.v-opt-colors .v-key.finger7 {
+    background-color: #aec6e0;
+    border-color: #aec6e0
+}
+
+.v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger1, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger2, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger3, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger4, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger7, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger8, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger9, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger10 {
+    /*background-image: url('../img/svg/v_nextkey.svg')*/
+}
+
+.v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger1, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger10 {
+    background-color: #ec8ca2;
+    border-color: #cc5a75
+}
+
+.v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger2, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger9 {
+    background-color: #d7a358;
+    border-color: #b37e31
+}
+
+.v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger3, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger8 {
+    background-color: #91bb68;
+    border-color: #69993c
+}
+
+.v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger4 {
+    background-color: #73bbc2;
+    border-color: #46939a
+}
+
+.v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger5, .v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger6 {
+    background-color: #b084c1;
+    border-color: #8a569f;
+    background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 5px, rgba(255, 255, 255, 0.5) 5px, rgba(255, 255, 255, 0.5) 10px);
+    background-repeat: no-repeat
+}
+
+.v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.finger7 {
+    background-color: #7f9fc3;
+    border-color: #5377a0
+}
+
+.v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.lefthand {
+    background-size: 50% 100%
+}
+
+.v-keyboard.v-opt-colors.v-opt-nextkey .v-key.next.righthand {
+    background-size: 50% 100%;
+    background-position: top right
+}
+
+.v-keyboard.v-opt-misprint .v-key.misprint, .v-keyboard.v-opt-colors.v-opt-misprint .v-key.next.misprint {
+    border-color: #ec7063;
+    background-color: #ec7063
+}
+
+.v-keyboard.v-opt-misprint .v-key.misprint span, .v-keyboard.v-opt-colors.v-opt-misprint .v-key.next.misprint span {
+    color: #FFF
+}
+
+.v-keyboard.v-opt-misprint .v-key.misprint sup, .v-keyboard.v-opt-colors.v-opt-misprint .v-key.next.misprint sup {
+    color: #EEE
+}
+
+.v-keyboard .v-key span, .v-keyboard .v-key sup {
+    position: absolute;
+    display: none
+}
+
+.v-keyboard.v-opt-labels .v-key span, .v-keyboard.v-opt-labels .v-key sup {
+    display: block
+}
+
+.v-keyboard .v-key span.major, .v-keyboard .v-key sup.major {
+    color: #555;
+    line-height: 1
+}
+
+.v-keyboard .v-key[data-key=F] span.major, .v-keyboard .v-key[data-key=J] span.major, .v-keyboard .v-key[data-key=NUMPAD5] span.major {
+    text-decoration: underline
+}
+
+.v-keyboard .v-key span.minor, .v-keyboard .v-key sup.minor {
+    color: #a52a2a;
+    line-height: 1
+}
+
+.v-keyboard .v-key.single span.major, .v-keyboard .v-key.double_lite span.major {
+    font-size: 20px;
+    left: 0;
+    right: auto;
+    bottom: 8px;
+    top: auto;
+    width: 100%;
+    text-align: center
+}
+
+.v-keyboard .v-key.double span.major, .v-keyboard .v-key.triple span.major, .v-keyboard .v-key.quadruple span.major, .v-keyboard .v-key.quadruple_lite_r span.major, .v-keyboard.shifting .v-key.double sup.major, .v-keyboard.shifting .v-key.triple sup.major, .v-keyboard.shifting .v-key.quadruple sup.major, .v-keyboard.shifting .v-key.quadruple_lite_r sup.major, .v-keyboard.altgring .v-key.triple span.minor, .v-keyboard.altgring .v-key.quadruple span.minor, .v-keyboard.altgring .v-key.quadruple_lite_r span.minor, .v-keyboard.altgring.shifting .v-key.quadruple sup.minor, .v-keyboard.altgring.shifting .v-key.quadruple_lite_l sup.minor {
+    font-size: 16px;
+    top: auto;
+    right: auto;
+    left: 8px;
+    bottom: 6px;
+    width: auto;
+    opacity: 1
+}
+
+.v-keyboard .v-key.double sup.major, .v-keyboard .v-key.triple sup.major, .v-keyboard .v-key.quadruple sup.major, .v-keyboard .v-key.quadruple_lite_r sup.major, .v-keyboard.shifting .v-key.double span.major, .v-keyboard.shifting .v-key.triple span.major, .v-keyboard.shifting .v-key.quadruple span.major, .v-keyboard.shifting .v-key.quadruple_lite_r span.major, .v-keyboard.altgring .v-key.quadruple sup.minor, .v-keyboard.altgring .v-key.quadruple_lite_l sup.minor, .v-keyboard.altgring.shifting .v-key.quadruple span.minor, .v-keyboard.altgring.shifting .v-key.quadruple_lite_l span.minor {
+    font-size: 12px;
+    left: 8px;
+    top: 2px;
+    right: auto;
+    bottom: auto;
+    opacity: .5
+}
+
+.v-keyboard .v-key.triple_lite span.major, .v-keyboard .v-key.quadruple_lite span.major, .v-keyboard .v-key.quadruple_lite_l span.major, .v-keyboard.altgring .v-key.triple_lite span.minor, .v-keyboard.altgring .v-key.quadruple_lite span.minor, .v-keyboard.altgring .v-key.quadruple_lite_l span.minor {
+    font-size: 20px;
+    left: 10px;
+    right: auto;
+    bottom: 8px;
+    top: auto
+}
+
+.v-keyboard .v-key.triple span.minor, .v-keyboard .v-key.triple_lite span.minor, .v-keyboard .v-key.quadruple span.minor, .v-keyboard .v-key.quadruple_lite span.minor, .v-keyboard .v-key.quadruple_lite_l span.minor, .v-keyboard .v-key.quadruple_lite_r span.minor, .v-keyboard.altgring .v-key.triple span.major, .v-keyboard.altgring .v-key.triple_lite span.major, .v-keyboard.altgring .v-key.quadruple span.major, .v-keyboard.altgring .v-key.quadruple_lite span.major, .v-keyboard.altgring .v-key.quadruple_lite_l span.major, .v-keyboard.altgring .v-key.quadruple_lite_r span.major {
+    right: 4px;
+    bottom: 4px;
+    left: auto;
+    top: auto;
+    font-size: 12px;
+    opacity: .75
+}
+
+.v-keyboard .v-key.quadruple sup.minor, .v-keyboard .v-key.quadruple_lite_l sup.minor, .v-keyboard.altgring .v-key.triple sup.major, .v-keyboard.altgring .v-key.quadruple sup.major, .v-keyboard.altgring .v-key.quadruple_lite_r sup.major {
+    right: 4px;
+    top: 6px;
+    left: auto;
+    bottom: auto;
+    font-size: 12px;
+    opacity: .35
+}
+
+.v-keyboard .v-key.system span.major, .v-keyboard .v-key[data-key=SPACE] span.major {
+    font-size: 11px;
+    color: #999;
+    bottom: 8px
+}
+
+.v-keyboard .v-key.system[data-key=ALTGR] span.major {
+    color: #a52a2a;
+    opacity: .75
+}
+
+.v-keyboard .v-key.system.left span.major {
+    left: 8px
+}
+
+.v-keyboard .v-key.system.center span.major, .v-keyboard .v-key[data-key=SPACE].center span.major {
+    left: 0;
+    width: 100%;
+    text-align: center
+}
+
+.v-keyboard .v-key.system.right span.major {
+    right: 8px
+}
+
+.v-keyboard .v-key.iso .v-key.system[data-key=ENTER] span.major {
+    bottom: auto;
+    top: 21px
+}
+
+.v-keyboard .v-key[data-key=SPACE] span.major {
+    color: #555
+}
+
+.v-keyboard.shifting .v-key.single span.major, .v-keyboard.shifting .v-key.double_lite span.major, .v-keyboard.shifting .v-key.triple_lite span.major, .v-keyboard.shifting .v-key.quadruple_lite span.major, .v-keyboard.shifting .v-key.quadruple_lite_l span.major, .v-keyboard.altgring.shifting .v-key.quadruple_lite span.minor, .v-keyboard.altgring.shifting .v-key.quadruple_lite_r span.minor {
+    text-transform: uppercase
+}
+
+.v-keyboard.shifting .v-key[data-key=SPACE] span.major, .v-keyboard.altgring.shifting .v-key.triple_lite span.major, .v-keyboard.altgring.shifting .v-key.quadruple_lite span.major, .v-keyboard.altgring.shifting .v-key.quadruple_lite_l span.major {
+    text-transform: none
+}
+
+.v-keyboard .v-tools {
+    background: #f4f4f4;
+    padding: 5px;
+    line-height: 0;
+    margin: 10px 0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px
+}
+
+.v-keyboard .v-tools .v-actions {
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style: none inside
+}
+
+.v-keyboard .v-tools ul.v-actions li.v-action {
+    position: relative;
+    display: inline-block;
+    margin-right: 6px;
+    padding-right: 8px;
+    border-right: 1px solid #e3e3e3
+}
+
+.v-keyboard .v-tools ul.v-actions li.v-action.disabled {
+    opacity: .25
+}
+
+.v-keyboard .v-tools ul.v-actions li.v-action:last-of-type {
+    border-right: 0
+}
+
+.v-keyboard .v-tools .v-actions .v-action > a {
+    display: block;
+    width: 26px;
+    height: 26px;
+    /*background: url('../img/svg/v_opts.svg') no-repeat*/
+}
+
+.v-keyboard .v-tools .v-actions .v-action > a:hover {
+    filter: brightness(103%)
+}
+
+.v-keyboard.v-opt-colors .v-tools .v-actions .v-action.colors > a {
+    background-position: 0 0
+}
+
+.v-keyboard .v-tools .v-actions .v-action.colors > a {
+    background-position: -26px 0
+}
+
+.v-keyboard.v-opt-nextkey .v-tools .v-actions .v-action.nextkey > a {
+    background-position: 0 -26px
+}
+
+.v-keyboard .v-tools .v-actions .v-action.nextkey > a {
+    background-position: -26px -26px
+}
+
+.v-keyboard.v-opt-misprint .v-tools .v-actions .v-action.misprint > a {
+    background-position: 0 -208px
+}
+
+.v-keyboard .v-tools .v-actions .v-action.misprint > a {
+    background-position: -26px -208px
+}
+
+.v-keyboard.v-opt-labels .v-tools .v-actions .v-action.labels > a {
+    background-position: 0 -52px
+}
+
+.v-keyboard .v-tools .v-actions .v-action.labels > a {
+    background-position: -26px -52px
+}
+
+.v-keyboard.v-opt-hands .v-tools .v-actions .v-action.hands > a {
+    background-position: 0 -78px
+}
+
+.v-keyboard .v-tools .v-actions .v-action.hands > a {
+    background-position: -26px -78px
+}
+
+.v-keyboard.v-opt-tune .v-tools .v-actions .v-action.tune > a {
+    background-position: 0 -104px
+}
+
+.v-keyboard .v-tools .v-actions .v-action.tune > a {
+    background-position: -26px -104px
+}
+
+.v-keyboard.v-opt-metronome .v-tools .v-actions .v-action.metronome > a {
+    background-position: 0 -130px
+}
+
+.v-keyboard .v-tools .v-actions .v-action.metronome > a {
+    background-position: -26px -130px
+}
+
+.v-keyboard.v-opt-cursor .v-tools .v-actions .v-action.cursor > a {
+    background-position: 0 -156px
+}
+
+.v-keyboard .v-tools .v-actions .v-action.cursor > a {
+    background-position: -26px -156px
+}
+
+.v-keyboard.v-opt-resize .v-tools .v-actions .v-action.resize > a {
+    background-position: 0 -182px
+}
+
+.v-keyboard .v-tools .v-actions .v-action.resize > a {
+    background-position: -26px -182px
+}
+
+.v-keyboard.v-opt-sounds .v-tools .v-actions .v-action.sounds > a {
+    background-position: 0 -234px
+}
+
+.v-keyboard .v-tools .v-actions .v-action.sounds > a {
+    background-position: -26px -234px
+}
+
+.v-keyboard.v-opt-locale .v-tools .v-actions .v-action.locale > a {
+    background-position: 0 -260px
+}
+
+.v-keyboard .v-tools .v-actions .v-action.locale > a {
+    background-position: -26px -260px
+}
+
+.v-keyboard.v-opt-useyo .v-tools .v-actions .v-action.useyo > a {
+    background-position: 0 -286px
+}
+
+.v-keyboard .v-tools .v-actions .v-action.useyo > a {
+    background-position: -26px -286px
+}
+
+.v-keyboard .v-tools .v-actions .v-action .v-action-field {
+    display: none
+}
+
+.v-keyboard .v-tools .v-actions .v-action .v-action-field select {
+    font-size: 13px;
+    padding: 1px 4px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px
+}
+
+.v-keyboard .v-tools .v-actions .v-action .v-action-field .unit {
+    color: #777;
+    font-size: 12px
+}
+
+.v-keyboard.v-opt-metronome .v-tools .v-actions .v-action.metronome {
+    width: 135px
+}
+
+.v-keyboard.v-opt-resize .v-tools .v-actions .v-action.resize {
+    width: 110px
+}
+
+.v-keyboard.v-opt-resize .v-tools .v-actions .v-action.resize .v-action-field, .v-keyboard.v-opt-metronome .v-tools .v-actions .v-action.metronome .v-action-field, .v-keyboard.v-opt-locale .v-tools .v-actions .v-action.locale .v-action-field {
+    position: absolute;
+    left: 35px;
+    top: 2px;
+    display: block
+}
+
+.v-keyboard .v-tools .v-layouts {
+    float: right;
+    margin: 0;
+    padding: 0
+}
+
+.v-keyboard .v-tools .v-layouts .v-current-layout-type {
+    color: #999
+}
+
+.v-keyboard .v-hands {
+    display: none
+}
+
+.v-keyboard.v-opt-hands .v-hands {
+    display: block
+}
+
+.v-keyboard .v-hands .v-hand {
+    position: absolute;
+    width: 186px;
+    height: 329px;
+    /*background: url('../img/v_hands.png') no-repeat*/
+}
+
+.v-keyboard .v-hands .v-hand.left {
+    bottom: -203px;
+    left: 70px;
+    background-position: 0 0
+}
+
+.v-keyboard .v-hands .v-hand.right {
+    bottom: -203px;
+    right: 460px;
+    background-position: 0 -329px
+}
+
+@-moz-keyframes look-at-me {
+    from {
+        -moz-transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+    10%, 20% {
+        -moz-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+    }
+    30%, 50%, 70%, 90% {
+        -moz-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+    }
+    40%, 60%, 80% {
+        -moz-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+    }
+    to {
+        -moz-transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+@-webkit-keyframes look-at-me {
+    from {
+        -moz-transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+    10%, 20% {
+        -moz-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+    }
+    30%, 50%, 70%, 90% {
+        -moz-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+    }
+    40%, 60%, 80% {
+        -moz-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+    }
+    to {
+        -moz-transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+@keyframes look-at-me {
+    from {
+        -moz-transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+    10%, 20% {
+        -moz-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+    }
+    30%, 50%, 70%, 90% {
+        -moz-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+    }
+    40%, 60%, 80% {
+        -moz-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+    }
+    to {
+        -moz-transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+.typingbox .v-keyboard .v-key.look_at_me {
+    -moz-transform-origin: center center;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -moz-animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -moz-animation-name: look-at-me;
+    -webkit-animation-name: look-at-me;
+    animation-name: look-at-me
+}
